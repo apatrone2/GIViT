@@ -1,12 +1,12 @@
 
 #This file contains dependable packages
 
-require("shiny", quietly = TRUE)
-require("networkD3", quietly = TRUE)
-require("tibble", quietly = TRUE)
-require("huge", quietly = TRUE)
-require("dplyr", quietly = TRUE)
-require("igraph", quietly = TRUE)
-require("qgraph", quietly = TRUE)
+library("shiny", quietly = TRUE)
+library("networkD3", quietly = TRUE)
+library("tibble", quietly = TRUE)
+library("huge", quietly = TRUE)
+library("dplyr", quietly = TRUE)
+library("igraph", quietly = TRUE)
+library("qgraph", quietly = TRUE)
 
 
