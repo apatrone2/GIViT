@@ -12,6 +12,7 @@
 #' data <- huge.generator(n = 75, d = 100, graph = "scale-free", verbose = FALSE)
 #' app <- ManualSelection_known_network(data = data$data,  real_network = data$theta)
 #' shiny::runApp(app)
+#' @export
 ManualSelection_known_network <- function(data, output_file = "./rho_value.RData", real_network) {
 
   # Parameters
@@ -24,7 +25,7 @@ ManualSelection_known_network <- function(data, output_file = "./rho_value.RData
   path <- seq(min, max, by = step)
 
   # Create solution path using the huge package
-  solution_path <- huge(data, method = "glasso", lambda = path)
+  solution_path <- huge::huge(data, method = "glasso", lambda = path)
 
   # Create a matrix to store scores for each solution in the path
   scores <- matrix(nrow = length(path), ncol = 14)

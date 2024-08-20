@@ -12,6 +12,7 @@
 #' data <- huge.generator(n = 75, d = 100, graph = "scale-free", verbose = FALSE)
 #' app <- ManualSelection(data = data$data)
 #' shiny::runApp(app)
+#' @export
 ManualSelection <- function(data, output_file = "./rho_value.RData") {
 
   # number of columns and rows in data
@@ -24,7 +25,7 @@ ManualSelection <- function(data, output_file = "./rho_value.RData") {
   step <- 0.01 # fineness of adjustment
 
   # Create solution path for glasso in HUGE
-  solution_path <- huge(x = data, method = "glasso", lambda = seq(min, max, by = step))
+  solution_path <- huge::huge(x = data, method = "glasso", lambda = seq(min, max, by = step))
 
   # Function to convert adjacency-matrix to a tibble format for shiny
   adjacency_to_tibble <- function(adj_matrix) {
