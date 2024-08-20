@@ -1,4 +1,4 @@
-Package: NetworkGLASSOVisualization
+Package: gViz
 Type: Package
 Title: Creates an visualization for GLASSO.
 Version: 0.1.0
