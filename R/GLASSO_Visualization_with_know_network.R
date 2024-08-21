@@ -53,7 +53,7 @@ ManualSelection_known_network <- function(data, output_file = "./rho_value.RData
   }
 
   # Shiny application
-  ui <- fluidPage(
+  ui <- shiny::fluidPage(
     titlePanel("Interactive Glasso Network Visualization"),
     sidebarLayout(
       sidebarPanel(

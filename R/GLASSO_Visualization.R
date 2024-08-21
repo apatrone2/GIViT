@@ -52,7 +52,7 @@ ManualSelection <- function(data, output_file = "./rho_value.RData") {
 
 
   # Luo Shiny-sovellus
-  ui <- fluidPage(
+  ui <- shiny::fluidPage(
     titlePanel("Interactive Glasso Network Visualization"),
     sidebarLayout(
       sidebarPanel(
