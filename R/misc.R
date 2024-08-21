@@ -91,3 +91,37 @@ calculate_scores <- function(cm) {
                         FNR = fnr, FDR = fdr, FOR = FOR, LRp = lr_plus, LRn = lr_neg)
   return(results)
 }
+
+# from network_visualisation_and_scores.R
+# author: Tuomas Hautamäki
+conf_matrix <- function(truth, estimation, margins = FALSE, normalize = FALSE,
+                        undirected = TRUE) {
+  same_edges <- truth * estimation
+  diff <- truth - estimation
+  summ <- truth + estimation
+  p <- dim(truth)[1]
+  max_edges <- (p^2 - p)
+  tp <- sum(same_edges)
+  tn <- sum(summ == 0) - p
+  fp <- sum(diff == -1)
+  fn <- sum((same_edges - truth) == -1)
+  P <- sum(truth)
+  N <- max_edges - P
+  EP <- sum(estimation)
+  EN <- max_edges - EP
+  cm <- matrix(c(tp, fn, fp, tn), nrow = 2, byrow = TRUE,
+               dimnames = list(c("True P", "True N"), c("Estim. P", "Estim. N")))
+  if (margins) {
+    cm <- matrix(c(tp, fn, P, fp, tn, N, EP, EN, max_edges), nrow = 3, byrow = TRUE,
+                 dimnames = list(c("True P", "True N", "Sum"), c("Estim. P", "Estim. N", "Sum")))
+  }
+  if (undirected) {
+    cm <- cm * 0.5
+  }
+  if (normalize) {
+    cm <- matrix(c(tp/P, fn/P, fp/N, tn/N), nrow = 2, byrow = TRUE,
+                 dimnames = list(c("True P", "True N"), c("Estim. P", "Estim. N")))
+  }
+  return(cm)
+}
+

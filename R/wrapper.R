@@ -1,4 +1,4 @@
-
+#TODO write README file
 
 
 #' glasso_manual
@@ -7,6 +7,13 @@
 #' @param data Dataframe
 #' @param real_network Adjadency matrix of real network, if available.
 #' @param file Path to the file, where solution is to be saved.
+#' @import shiny
+#' @import networkD3
+#' @import tibble
+#' @import huge
+#' @import dplyr
+#' @import igraph
+#' @import qgraph
 #' @examples
 #' data <- huge.generator(n = 75, d = 100, graph = "scale-free", verbose = FALSE)
 #' app <- glasso_manual(data = data$data,  real_network = data$theta)
