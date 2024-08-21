@@ -3,6 +3,8 @@
 
 
 #' ManualSelection
+#' @import shiny
+#' @import networkD3
 #'
 #' Creates visualization tool for glasso. Allows user to choose GLASSO-solution and visualize it immediately.
 #' @param data dataframe of observations with column-names or without.
@@ -60,7 +62,7 @@ ManualSelection <- function(data, output_file = "./rho_value.RData") {
         shiny::actionButton("saveButton", "Save choise")
       ),
       shiny::mainPanel(
-        forceNetworkOutput("network")
+        shiny::forceNetworkOutput("network")
       )
     )
   )

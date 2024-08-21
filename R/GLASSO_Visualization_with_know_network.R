@@ -3,7 +3,8 @@
 
 
 #' ManualSelection_known_network
-#'
+#' @import shiny
+#' @import networkD3
 #' Creates an visualization for GLASSO-solution path in a simulated setup.
 #' @param data Sampled data in a data.frame form.
 #' @param output_file The name of the file if user decides to save the solution chosen.
@@ -66,11 +67,11 @@ ManualSelection_known_network <- function(data, output_file = "./rho_value.RData
                      selected = "default")  # Add radio-buttons
       ),
       shiny::sidebarPanel(
-        uiOutput("uu")
+        shiny::uiOutput("uu")
       )
     ),
     shiny::mainPanel(
-      forceNetworkOutput("network")
+      shiny::forceNetworkOutput("network")
     )
   )
 
