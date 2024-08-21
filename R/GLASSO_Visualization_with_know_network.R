@@ -3,8 +3,7 @@
 
 
 #' ManualSelection_known_network
-#' @import shiny
-#' @import networkD3
+#'
 #' Creates an visualization for GLASSO-solution path in a simulated setup.
 #' @param data Sampled data in a data.frame form.
 #' @param output_file The name of the file if user decides to save the solution chosen.
@@ -13,7 +12,6 @@
 #' data <- huge.generator(n = 75, d = 100, graph = "scale-free", verbose = FALSE)
 #' app <- ManualSelection_known_network(data = data$data,  real_network = data$theta)
 #' shiny::runApp(app)
-#' @export
 ManualSelection_known_network <- function(data, output_file = "./rho_value.RData", real_network) {
 
   # Parameters

@@ -3,8 +3,6 @@
 
 
 #' ManualSelection
-#' @import shiny
-#' @import networkD3
 #'
 #' Creates visualization tool for glasso. Allows user to choose GLASSO-solution and visualize it immediately.
 #' @param data dataframe of observations with column-names or without.
@@ -14,7 +12,6 @@
 #' data <- huge.generator(n = 75, d = 100, graph = "scale-free", verbose = FALSE)
 #' app <- ManualSelection(data = data$data)
 #' shiny::runApp(app)
-#' @export
 ManualSelection <- function(data, output_file = "./rho_value.RData") {
 
   # number of columns and rows in data
