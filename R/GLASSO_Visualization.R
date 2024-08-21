@@ -54,15 +54,15 @@ ManualSelection <- function(data, output_file = "./rho_value.RData") {
 
 
   # Luo Shiny-sovellus
-  ui <- shiny::fluidPage(
-    shiny::titlePanel("Interactive Glasso Network Visualization"),
-    shiny::sidebarLayout(
-      shiny::sidebarPanel(
-        shiny::sliderInput("rho", "Choose regularization parameter:", min = min, max = max, value = 0.5, step = step),
-        shiny::actionButton("saveButton", "Save choise")
+  ui <- fluidPage(
+    titlePanel("Interactive Glasso Network Visualization"),
+    sidebarLayout(
+      sidebarPanel(
+        sliderInput("rho", "Choose regularization parameter:", min = min, max = max, value = 0.5, step = step),
+        actionButton("saveButton", "Save choise")
       ),
-      shiny::mainPanel(
-        shiny::forceNetworkOutput("network")
+      mainPanel(
+        forceNetworkOutput("network")
       )
     )
   )
