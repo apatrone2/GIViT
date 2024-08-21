@@ -54,22 +54,22 @@ ManualSelection_known_network <- function(data, output_file = "./rho_value.RData
 
   # Shiny application
   ui <- shiny::fluidPage(
-    titlePanel("Interactive Glasso Network Visualization"),
-    sidebarLayout(
-      sidebarPanel(
-        sliderInput("rho", "Choose regularization parameter:", min = min, max = max, value = 0.5, step = step),
-        actionButton("saveButton", "Save choise"),
-        checkboxInput("checkbox", "Show wrong connections", value = TRUE),
-        radioButtons("nodeOption", "Choose source of node ID:",
+    shiny::titlePanel("Interactive Glasso Network Visualization"),
+    shiny::sidebarLayout(
+      shiny::sidebarPanel(
+        shiny::sliderInput("rho", "Choose regularization parameter:", min = min, max = max, value = 0.5, step = step),
+        shiny::actionButton("saveButton", "Save choise"),
+        shiny::checkboxInput("checkbox", "Show wrong connections", value = TRUE),
+        shiny::radioButtons("nodeOption", "Choose source of node ID:",
                      choices = c("Show clustering coefficent" = "default",
                                  "Show Walktrap-glusters" = "cluster_tags"),
                      selected = "default")  # Add radio-buttons
       ),
-      sidebarPanel(
+      shiny::sidebarPanel(
         uiOutput("uu")
       )
     ),
-    mainPanel(
+    shiny::mainPanel(
       forceNetworkOutput("network")
     )
   )
