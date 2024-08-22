@@ -17,8 +17,8 @@ Interactive GLASSO visualization tool. gViz allows user to load data and visuali
 
 gViz creates an Shiny-application, were user can manually choose and visualize the resulting gLASSO-network
 
-![](images/kuva1.png)
+![kuva1](images/kuva1.png)
 
 With and without the real network information
 
-![](images/kuva2.png)
+![kuva2](images/kuva2.png)
