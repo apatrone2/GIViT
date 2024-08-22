@@ -2,25 +2,25 @@
 #This file contains dependable shinys
 
 
-if (!require(shiny)) install.shinys('shiny')
+if (!requireNamespace("shiny")) install.packages('shiny')
 library(shiny, quietly = TRUE)
 
-if (!require(networkD3)) install.packages('networkD3')
+if (!requireNamespace("networkD3")) install.packages('networkD3')
 library(networkD3, quietly = TRUE)
 
-if (!require(tibble)) install.packages('tibble')
+if (!requireNamespace("tibble")) install.packages('tibble')
 library(tibble, quietly = TRUE)
 
-if (!require(huge)) install.packages('huge')
+if (!requireNamespace("huge")) install.packages('huge')
 library(huge, quietly = TRUE)
 
-if (!require(dplyr)) install.packages('dplyr')
+if (!requireNamespace("dplyr")) install.packages('dplyr')
 library(igraph, quietly = TRUE)
 
-if (!require(igraph)) install.packages('igraph')
+if (!requireNamespace("igraph")) install.packages('igraph')
 library(igraph, quietly = TRUE)
 
-if (!require(qgraph)) install.packages('qgraph')
+if (!requireNamespace("qgraph")) install.packages('qgraph')
 library(qgraph, quietly = TRUE)
 
 
