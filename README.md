@@ -3,7 +3,8 @@
 Interactive GLASSO visualization tool. gViz allows user to load data and visualize the graphical-LASSO result.
 
 # How to use
-```r
+
+``` r
  library(devtools)
  install_github("apatrone2/gViz")
  library(gViz)
@@ -14,5 +15,10 @@ Interactive GLASSO visualization tool. gViz allows user to load data and visuali
  shiny::runApp(app)
 ```
 
+gViz creates an Shiny-application, were user can manually choose and visualize the resulting gLASSO-network
 
+![](images/kuva1.png)
 
+With and without the real network information
+
+![](images/kuva2.png)
