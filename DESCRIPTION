@@ -9,7 +9,6 @@ Imports: shiny,
          networkD3,
          tibble,
          huge,
-         dplyr,
          igraph,
          qgraph
 License: CC-BY-SA
