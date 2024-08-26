@@ -128,7 +128,7 @@ ManualSelection_known_network <- function(data, output_file = "./rho_value.RData
     output$uu <- renderUI({
       rho <- input$rho
       index <- which.min(abs(solution_path$lambda - rho))
-      paste("MCC:", round(scores[index, 3], 2), "\nACC:", round(scores[index, 1], 2))  # Display the third column score
+      paste("MCC:", round(scores[index, 3], 2), "ACC:", round(scores[index, 1], 2), "F1: ", round(scores[index, 4], 2))  # Display the third column score
     })
 
     output$network <- renderForceNetwork({
