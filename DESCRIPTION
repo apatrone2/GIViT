@@ -3,7 +3,7 @@ Type: Package
 Title: Creates an visualization for GLASSO.
 Version: 0.1.0
 Author: Aleksi Patronen
-Maintainer: Aleksi Patronen <aleksipatronen[аṯ]gmail.com>
+Maintainer: Aleksi Patronen <аleksipаtronen[аṯ]gmаil.com>
 Description: Creates an visualization of GLASSO solution path.
 Imports: shiny,
          networkD3,
