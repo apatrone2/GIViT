@@ -1,12 +1,11 @@
 
 
-# In this file is presented an code were user can test their own
+# In this file is presented a code were user can test their own
 # ability to choose a regularization parameter for graphical LASSO
-# Ran through the code and it will present an matrix with
+# Ran through the code and it will present a matrix with scores.
 
 
-
-library(gViz)
+library(GIViT)
 library(huge)
 
 create_and_save_networks <- function(p, n, v = 0.3){
@@ -54,8 +53,8 @@ for(i in 1:20){
   og_url <- paste("./data/Network_", i, ".Rdata", sep = "")
   load(og_url)
   load(paste("./Results/manual_selection",i,".RData",sep=""))
-  cm <- gViz:::conf_matrix(estimation = selected_solution, truth = network$theta )
-  manual_score[i,1:14] <-  gViz:::unpack_score_list(gViz:::calculate_scores(cm))
+  cm <- GIViT:::conf_matrix(estimation = selected_solution, truth = network$theta )
+  manual_score[i,1:14] <-  GIViT:::unpack_score_list(GIViT:::calculate_scores(cm))
 }
 colnames(manual_score) <- c("ACC", "ACC_bal", "MCC", "F1", "TPR", "TNR", "PPV", "NPV", "FPR", "FNR", "FDR", "FOR", "LRp", "LRn")
 round(colMeans(manual_score),2)

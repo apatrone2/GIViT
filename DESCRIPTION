@@ -1,6 +1,6 @@
-Package: gViz
+Package: GIViT
 Type: Package
-Title: Creates an visualization for GLASSO.
+Title: Creates a visualization for GLASSO.
 Version: 0.1.0
 Author: Aleksi Patronen
 Maintainer: Aleksi Patronen <givitrpackage@gmail.com>
