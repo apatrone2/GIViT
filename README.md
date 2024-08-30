@@ -17,7 +17,7 @@ Interactive GLASSO visualization tool. GIViT allows user to load data and visual
 
 GIViT creates an Shiny-application, were user can manually choose and visualize the resulting gLASSO-network
 
-![kuva1](kuvat/kuva1.png)
+![kuva1](images/kuva1.png)
 
 With and without the real network information
 
