@@ -25,14 +25,13 @@ With and without the real network information
 
 # Dependencies
 
-GIViT requires the following libraries: shiny, networkD3, tibble, huge, dplyr, igraph, qgraph. loading and installing required.
+GIViT requires the following libraries: shiny, networkD3, tibble, huge, igraph, qgraph. loading and installing required.
 
 ``` r
 library(shiny)
 library(networkD3)
 library(tibble)
 library(huge)
-library(dplyr)
 library(igraph)
 library(qgraph)
 ```
